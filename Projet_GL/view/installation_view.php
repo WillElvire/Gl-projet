@@ -43,12 +43,12 @@
                                         <br>
                                         <br>
                                         <label>Entrez votre nom</label>
-                                        <input type="text" name="nom" class="form-control">
+                                        <input type="text" name="nom" class="form-control" required="true">
                                         <label>Entrez votre prenom</label>
-                                        <input type="text" name="prenom" class="form-control">
+                                        <input type="text" name="prenom" class="form-control" required="true">
 
                                         <label>Sexe:</label>
-                                        <select class="form-control">
+                                        <select class="form-control" name="sexe" required="true">
                                                         
                                                         <option value="Masculin">Masculin</option>
 
@@ -56,13 +56,13 @@
 
                                         </select>
                                         <label>Mot de passe</label>
-                                        <input type="password" name="mdp" class="form-control">
+                                        <input type="password" name="mdp" class="form-control" required="true">
 
                                         <label>Votre Adresse Mail</label>
-                                        <input type="text" name="mail" class="form-control">
+                                        <input type="text" name="mail" class="form-control" required="true">
 
                                         <br>
-                                        <button class="btn btn-success">S'enregister</button>
+                                        <button class="btn btn-success" name="bouton">S'enregister </button>
 
 
                                 </div>
@@ -78,15 +78,31 @@
 
                                <div class="Message col-md-5">
 
+                                                <?php 
+
+                                                        if(isset($error)){
+
+                                                                if($error!=""){
+
+                                                ?>
+
                                          <br>
-                                         <div class="alert alert-danger">
+                                        <div class="alert alert-danger">
 
 
-                                                Mot de passe differents
+                                                <?=
+                                                     $error;
+                                                ?>
                                                  
 
-                                         </div>
-                                       
+                                                </div>
+
+
+                                                <?php
+                                                        }
+
+                                                        }
+                                                ?>
 
 
                                </div>

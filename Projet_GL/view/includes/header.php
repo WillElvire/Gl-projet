@@ -6,7 +6,7 @@
 
 
 
-        <ul class="nav flex-column col-md-12">
+        <ul class="nav flex-column">
 
           <li class="nav-item">
             <a class="nav-link active" href="#">

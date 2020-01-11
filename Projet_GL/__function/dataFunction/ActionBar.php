@@ -7,7 +7,7 @@
    * @return string  l'expression doit etre un chaine de caracteres
    */
 
-   function setActionBar($action,$url="home",$icon=null):string{
+   function setActionBar($action,$url="home",$id=null,$icon=null):string{
 
 
          $action=str_secure($action);
@@ -16,7 +16,7 @@
 
         $retour="     
               <li class=\"nav-item\">
-                        <a class=\"nav-link \" href=$url>
+                        <a class=\"nav-link \" id=\"$id\" href=$url>
                          <span data-feather=\"file-text\" class=\"glyphicon glyphicon-$icon\"></span>
                                  $action
                         </a>  

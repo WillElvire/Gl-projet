@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+    <?php  include_once 'includes/head.php'?>
     <meta charset="UTF-8">
-    <?Php 
-
-        include_once 'view/includes/partials/getTitle.php';
-        include_once 'view/includes/head.php';
-        
-
-
-     ?>
-
+    
     
 </head>
 <body>
+    <br>
+    <br>
+    <br>
+    <hr>    
+    <div class="alert alert-danger">Page :  <span class=" badge badge-info"> <?= $_GET['page']."</span> \t Not Found" ?> </div>
+    <hr>
 
-     <?= $_GET['page']."\tpas disponible" ?>
     
 </body>
 </html>

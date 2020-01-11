@@ -24,11 +24,11 @@
                 <?=setTitle("Article");?>
         <ul class="nav flex-column mb-2">
          
-                <?=setActionBar("Soumettre un article","home")?>
+                <?=setActionBar("Ajouter un article","#","Ajout")?>
 
-                <?=setActionBar("Evaluer un Article")?>
+                <?=setActionBar("Evaluer un Article","#","Eval")?>
 
-                <?=setActionBar("Recherchez un article")?>
+                <?=setActionBar("Lister les articles","#","List")?>
           
         </ul>
                 <?=setTitle("Parametre")?>
@@ -39,7 +39,7 @@
                 <!-- Button trigger modal -->
               <li>
                   <a   href="" data-toggle="modal" data-target="#exampleModal" style="margin-left: 12px;">
-                          deconnection
+                          Deconnection
                    </a>
                 </li>
 

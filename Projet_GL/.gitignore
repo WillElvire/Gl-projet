@@ -1,0 +1,5 @@
+#pour que git ignore certains fichier
+
+
+__function/password
+__function/username

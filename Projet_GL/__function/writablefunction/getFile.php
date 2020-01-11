@@ -18,30 +18,17 @@
          *le contenu des fichier sera ainsi enregistre dans la base de donnee afin de faire des eventuelles comparaisons si il ya une modification des fichier
          */
         
- 
+    	          if (file_exists($file) and file_exists($file2)):
+                     $content=(string)file_get_contents($file);
+                    $content1=(string)file_get_contents($file2);
+               if(empty($content) and empty($content1)):
 
+                    return false;
 
+               else:
+                    return true;
 
-    	if (file_exists($file) and file_exists($file2)):
-
-
-            $content=(string)file_get_contents($file);
-            $content1=(string)file_get_contents($file2);
-
-            
-
-            if(empty($content) and empty($content1)):
-
-
-                 return false;
-
-            else:
-                 return true;
-
-            endif;
-
-
-
+               endif;
 
         endif;
 
@@ -50,3 +37,22 @@
 
 
     }
+
+
+ /*
+ *  cette partie nous permet de lire nos fichier ;
+  */
+
+function read($file):string{
+
+     $file=dirname(__DIR__).DIRECTORY_SEPARATOR.str_secure($file);
+
+     if(file_exists($file)):
+
+          $readline=(string)file_get_contents($file);
+
+          return (!empty($readline))?$readline:"Ce fichier est vide";
+
+     endif;
+
+}

@@ -1,3 +1,0 @@
-<?php 
-
-//controller of installation

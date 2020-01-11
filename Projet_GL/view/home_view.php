@@ -1,4 +1,11 @@
+<?php 
+     
 
+     $myresult=verify();
+     if($myresult==true){
+
+ 
+ ?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -27,11 +34,11 @@
   </head>
   <body>
       <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-         <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">DashBoard</a>
+         <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Espace Administrateur</a>
          <input class="form-control bg-dark w-100"  style="border-style: none;" type="text" placeholder="Search" aria-label="Search">
          <ul class="navbar-nav px-3">
               <li class="nav-item text-nowrap">
-                   <a class="nav-link" href="#">Sign out</a>
+                   <a class="nav-link" href="#">Recherche</a>
               </li>
           </ul>
 
@@ -73,35 +80,13 @@
       </div>
 
 
+      <main class="container" id="container">
+              
 
+              <?php include_once 'includes/content.php' ?>;
 
-      <div class="card-deck">
-        <div class="card">
-          <img src="https://static3.formation-isfac.com/images/formations-courtes/ressources-humaines.gif" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Enregister Un Article</h5>
-            <p class="card-text">Vous avez la possibilité de  creez un article en cliquant ici</p>
-            <button class="btn btn-primary">Creez Article</button>
-          </div>
-        </div>
-        <div class="card">
-          <img src="https://media1.tenor.com/images/f599ac25656a72761dab063dd2c8bc7b/tenor.gif?itemid=14556646" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Evaluez un Article</h5>
-            <p class="card-text">Vous Pouvez Evalué un Article en cliquant ici</p>
-            <button class="btn btn-primary">Evaluer Article</button>
-            
-          </div>
-        </div>
-        <div class="card">
-          <img src="https://media2.giphy.com/media/h5FIFDs6rXLpWlWWZJ/source.gif" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title"> Affichez la Liste</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-      </div>
+          
+        </main>
     </main>
   </div>
 </div>
@@ -114,3 +99,16 @@
 
          ?>
 </html>
+
+<?php 
+
+}else{
+
+header("location:installation");
+
+
+}
+
+
+
+ ?>

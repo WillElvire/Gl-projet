@@ -7,8 +7,8 @@
         /*
             le chemin d'acces du fichier
          */
-    	$file=dirname(__DIR__).DIRECTORY_SEPARATOR."username";
-        $file2=dirname(__DIR__).DIRECTORY_SEPARATOR."password";
+    	     $file=dirname(__DIR__).DIRECTORY_SEPARATOR."username";
+          $file2=dirname(__DIR__).DIRECTORY_SEPARATOR."password";
 
         /*
          * cette condition verifie si les fichiers password et username sont crees
@@ -51,7 +51,7 @@ function read($file):string{
 
           $readline=(string)file_get_contents($file);
 
-          return (!empty($readline))?$readline:"Ce fichier est vide";
+          return (!empty($readline))?$readline:"default Account";
 
      endif;
 

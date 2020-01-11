@@ -36,10 +36,14 @@
                 
          <ul class="nav flex-column mb-2">
          
-                <?=setActionBar("Deconnection","home")?>
+                <!-- Button trigger modal -->
+              <li>
+                  <a   href="" data-toggle="modal" data-target="#exampleModal" style="margin-left: 12px;">
+                          deconnection
+                   </a>
+                </li>
 
-                <?=setActionBar("Evaluer l'application")?>
-          
+            <?php include_once 'modal.php'; ?>
 
         </ul>
 

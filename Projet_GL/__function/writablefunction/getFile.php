@@ -7,13 +7,43 @@
         /*
             le chemin d'acces du fichier
          */
-    	$file=dirname(__DIR__).DIRECTORY_SEPARATOR."installation";
+    	$file=dirname(__DIR__).DIRECTORY_SEPARATOR."username";
+        $file2=dirname(__DIR__).DIRECTORY_SEPARATOR."password";
 
         /*
-         * une condition ternaire 
+         * cette condition verifie si les fichiers password et username sont crees
+         * si c'est le cas on verifie leurs contenu
+         * si le contenue est vide vous rester sur la page d'installation dans le cas contraitre vous avez access au dashboard admin
+         
+         *le contenu des fichier sera ainsi enregistre dans la base de donnee afin de faire des eventuelles comparaisons si il ya une modification des fichier
          */
+        
+ 
 
-    	return (file_exists($file))?"true":"false";
+
+
+    	if (file_exists($file) and file_exists($file2)):
+
+
+            $content=(string)file_get_contents($file);
+            $content1=(string)file_get_contents($file2);
+
+            
+
+            if(empty($content) and empty($content1)):
+
+
+                 return false;
+
+            else:
+                 return true;
+
+            endif;
+
+
+
+
+        endif;
 
 
 

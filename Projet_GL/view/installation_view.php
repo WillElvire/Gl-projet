@@ -25,35 +25,68 @@
 
 
 
-                        
+                   
+                   
 
                              
 
-                               <div>
+                    <div class="formulaire col-md-6">
+
+
                                        
-                                        <form class="form-group" method="post" action="" enctype="multipart/data-form">
+                        <form class="form-group " method="post" action="" enctype="multipart/data-form">
+
+                                <div class="component">
+                                        <br>
+                                        <br>
+                                        <font color="white"> <b>CREEZ UN COMPTE ADMINISTRATEUR</b></font>
+                                        <br>
+                                        <br>
+                                        <label>Entrez votre nom</label>
+                                        <input type="text" name="nom" class="form-control">
+                                        <label>Entrez votre prenom</label>
+                                        <input type="text" name="prenom" class="form-control">
+
+                                        <label>Sexe:</label>
+                                        <select class="form-control">
+                                                        
+                                                        <option value="Masculin">Masculin</option>
+
+                                                        <option value="Feminin">Feminin</option>
+
+                                        </select>
+                                        <label>Mot de passe</label>
+                                        <input type="password" name="mdp" class="form-control">
+
+                                        <label>Votre Adresse Mail</label>
+                                        <input type="text" name="mail" class="form-control">
+
+                                        <br>
+                                        <button class="btn btn-success">S'enregister</button>
 
 
-                                                <label>Entrez votre nom</label>
-                                                <input type="text" name="" class="form-control">
-                                                <label>Entrez votre prenom</label>
-                                                <input type="text" name="" class="form-control">
-
-                                                <label>Photo (*faculatitif)</label>
-                                                <div class="box__input">
-                                                <input class="box__file" type="file" name="files[]" id="file" data-multiple-caption="{count} files selected" multiple />
-                                                <label for="file"><strong>Choose a file</strong><span class="box__dragndrop"> or drag it here</span>.</label>
-                                                 <button class="box__button" type="submit">Upload</button>
-                                                </div>
-                                                <div class="box__uploading">Uploading&hellip;</div>
-                                                <div class="box__success">Done!</div>
-                                                <div class="box__error">Error! <span></span>.</div>
-
+                                </div>
+                                                
                                                 
 
 
 
                                         </form>
+
+
+                               </div>
+
+                               <div class="Message col-md-5">
+
+                                         <br>
+                                         <div class="alert alert-danger">
+
+
+                                                Mot de passe differents
+                                                 
+
+                                         </div>
+                                       
 
 
                                </div>
@@ -74,14 +107,12 @@
                  </div>
 
 
-
-                        
          
 
          </div>
 
 
     </body>
-
+        
          <?php include_once 'includes/script.php'?>
 </html>

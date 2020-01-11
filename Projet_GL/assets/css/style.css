@@ -1,6 +1,43 @@
-.box__dragndrop,
-.box__uploading,
-.box__success,
-.box__error {
-  display: none;
+
+/*
+
+        DESIGNED BY KOUA WILFRIED UI DESIGNER
+
+        ce code permet de customiser la page d'inscription
+
+ */
+.formulaire{
+  width: 600px;
+  height: 600px;
+  background-color:rgba(0,0,0,0.5);
+  margin-left: 10px;
+  box-shadow: 14px 14px 14px rgba(0,0,0,0.9);
+  margin-top: 15px;
+}
+.formulaire .form-control{
+  width: 500px;
+  text-align: center;
+}
+.formulaire label{
+  color: white;
+  font-weight: bold;
+  margin-left: 15px;
+}
+.component{
+  margin-left: 45px;
+}
+body{
+
+  background-image: url("../img/banner.jpg");
+}
+.formulaire .form-control:hover{
+  background: rgba(0,0,0,0.1);
+  color: white;
+  font-weight: bold;
+  text-overflow: initial;
+  border:1px solid forestgreen;
+}
+.formulaire button:hover{
+     background: rgba(0,0,0,0.5);
+     color:forestgreen;
 }

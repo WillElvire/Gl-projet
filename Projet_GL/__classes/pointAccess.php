@@ -23,10 +23,11 @@ class Redirect{
 	    	  else:    
 
                         $getVerification=verify();
+                        echo $getVerification;
                         
-                        if($getVerification==='true'):
+                        if($getVerification==true):
 
-	    	  			         $this->page="home";
+	    	  	        $this->page="home";
 
                         else:
                                 $this->page="installation";

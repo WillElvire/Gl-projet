@@ -8,7 +8,6 @@
   $redirect->getRedirection();
 
 
- installation();
 
 
 

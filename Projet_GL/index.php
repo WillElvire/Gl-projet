@@ -8,7 +8,7 @@
   $redirect->getRedirection();
 
 
-echo "ok";
+
 
 
 ?>

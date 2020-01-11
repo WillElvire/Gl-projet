@@ -26,86 +26,72 @@ extract($_POST);
 
                    else:
 
-                            if(strlen($nom)>=255):
+                        if(strlen($nom)>=255):
 
 
-                                    $error=" Votre nom ne doit  pas etre si grand";
+                            $error=" Votre nom ne doit  pas etre si grand";
+
+
+                        else:
+
+
+                            if(empty($prenom)):
+
 
 
                             else:
 
+                                if(strlen($prenom)>=255):
 
-                                   if(empty($prenom)):
-
-
-
-                                   else:
-
-                                       if(strlen($prenom)>=255):
+                                        $error=" Votre Prenom ne doit  pas etre si grand";
+                                else:
 
 
+                                        if(empty($mdp)):
 
 
-                                                   $error=" Votre Prenom ne doit  pas etre si grand";
-                                       else:
+                                        else:
+
+                                            if($mdp>255):
 
 
-                                                 if(empty($mdp)):
+                                                $error=" votre mot de passe doit contenir moin de 255 carateres";
 
 
 
+                                            else:
 
 
-                                                 else:
+                                                    installation($nom,sha1($mdp));
 
-                                                     if($mdp<7):
+                                                    if(empty($mail)):
 
+                                                        $error="votre mail semble etre vide";
 
-                                                         $error=" votre mot de passe doit contenir moin de 7 carateres";
+                                                    else:
 
-
-
-                                                     else:
-
-                                                           if(empty($mail)):
+                                                        if(filter_var($mail,FILTER_VALIDATE_EMAIL)):
 
 
+                                                            header("location:home");
 
-                                                           else:
+                                                        else:
 
+                                                            $eror="Le mail n'est pas valide";
 
+                                                        endif;
 
-                                                                    if(filter_var($mail,FILTER_VALIDATE_EMAIL)):
-
-
-
-                                                                            
-
-
-                                                                        else:
-
-                                                                            $eror="Le mail n'est pas valide";
-
-
-                                                                        endif;
-
-
-
-                                                          endif;
 
                                                     endif;
 
+                                                    endif;
 
                                                 endif;
-
 
                                        endif;
 
 
-
                                    endif;
-
-
 
 
                             endif;
@@ -124,7 +110,7 @@ extract($_POST);
             endif;
 
 
-        installation($nom,$mdp);
+        
 
  endif;
 

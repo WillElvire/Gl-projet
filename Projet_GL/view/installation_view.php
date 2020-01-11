@@ -27,10 +27,24 @@
 
                         
 
-                               <?php include_once'includes/header.php'?>
+                             
 
-                               <div class="col-md-9">
-                                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, delectus voluptates repellat molestiae harum sint voluptatem eaque, inventore est. Aliquam voluptas quibusdam laudantium at accusantium vero omnis quis. Iure, nihil. sadam
+                               <div>
+                                       
+                                        <form class="form-group" method="post" action="">
+
+
+                                                <label>Entrez votre nom</label>
+                                                <input type="text" name="" class="form-control">
+                                                <label>Entrez votre prenom</label>
+                                                <input type="text" name="" class="form-control">
+                                                
+
+
+
+                                        </form>
+
+
                                </div>
 
 
@@ -50,7 +64,7 @@
 
 
 
-                        <?php include_once'includes/footer.php'?>
+                        
          
 
          </div>

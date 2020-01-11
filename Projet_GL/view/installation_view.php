@@ -59,7 +59,7 @@
                                         <input type="password" name="mdp" class="form-control" required="true">
 
                                         <label>Votre Adresse Mail</label>
-                                        <input type="text" name="mail" class="form-control" required="true">
+                                        <input type="mail" name="mail" class="form-control" required="true">
 
                                         <br>
                                         <button class="btn btn-success" name="bouton">S'enregister </button>

@@ -1,0 +1,3 @@
+<?Php
+
+//model of home

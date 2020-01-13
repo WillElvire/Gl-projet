@@ -5,6 +5,14 @@
 
 <div class="row">
 
+    <div class="btn-group">
+
+        <button class="btn btn-outline-primary">Resume d'Article</button>
+        <button class="btn btn-outline-primary">Soumettre un Article    </button>
+        
+
+    </div>
+
 	<form class="form-group col-md-12" method="post">
 		      <br>
 		      <label>Identificateur</label>
@@ -18,7 +26,7 @@
               </textarea>
               <br>
               <br>
-              <button class="btn btn-success invisible" id="button" name="enregistre" >Enregister L'article</button>
+              <button class="btn btn-success " id="button" name="enregistre" >Enregister L'article</button>
 
 
 

@@ -73,7 +73,7 @@ extract($_POST);
                                                         if(filter_var($mail,FILTER_VALIDATE_EMAIL)):
 
 
-                                                            header("location:home");
+                                                            //header("location:home");
 
                                                         else:
 

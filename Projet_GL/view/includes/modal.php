@@ -1,6 +1,6 @@
 <!-- Modal -->
     <?php 
-
+             //utilisation de certaints traits
             use Spipu\Html2Pdf\Html2Pdf;
             use Spipu\Html2Pdf\Exception\Html2PdfException;
             use Spipu\Html2Pdf\Exception\ExceptionFormatter;
@@ -15,11 +15,12 @@
 
               if(isset($enregistrer)):
     
-
+             //verification de l'existance de certains elements du formulaire de soumission d'article
                   if(isset($identificateur)  and isset($nom) and isset($titre)  and  isset($resume)):
 
-                          
+                          //declaration de la date 
                         $date=date("j/M/Y g:i:s");
+                      //le contenu du pdf
                         $content="  
                                             <br>
                                             <br>
@@ -31,16 +32,24 @@
                                               <h4>Resume </h4>
                                               <h4>$resume</h4>            
                                   ";
+
+                        //on cree un fichier avec le nom de l'auteur
                         $article=new Article($identificateur,$titre,$nom,$resume);
                         $article->createResume();
+
+
 
                             
                          sleep(1);
 
-                        try{
+                        try{    
+
+                                 //utilisation de la classe permettant de generer des pdf
 
                                 $html2pdf = new Html2Pdf("P","A4","fr");
+                                //le pdf contient le contenu content
                                 $html2pdf->writeHTML($content);
+                                //on rempli le fichier qui a le nom de l'auteur
                                 $html2pdf->output("C:wamp".DIRECTORY_SEPARATOR."www".DIRECTORY_SEPARATOR."gl-projet".DIRECTORY_SEPARATOR."Projet_GL".DIRECTORY_SEPARATOR."Articles".DIRECTORY_SEPARATOR.$nom.".pdf","F");
 
                         }catch(Html2PdfException $e){

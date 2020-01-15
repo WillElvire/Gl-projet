@@ -9,31 +9,15 @@ extract($_POST);
  if(isset($_POST['bouton'])):
 
 
-            if(isset($nom) and isset($username) and isset($sexe) and isset($mdp) and isset($mail)):
+            if(  isset($username) and isset($mail)):
 
 
-                   $nom=str_secure($nom);
+                   
                    $username=str_secure($username);
-                   $sexe=str_secure($sexe);
-                   $mdp=str_secure($mdp);
+                   
                    $mail=str_secure($mail);
 
-                   if(empty($nom)):
-
-
-                            $error="Veuillez Renseigné votre nom";
-
-
-                   else:
-
-                        if(strlen($nom)>=255):
-
-
-                            $error=" Votre nom ne doit  pas etre si grand";
-
-
-                        else:
-
+                   
 
                             if(empty($username)):
 
@@ -43,62 +27,46 @@ extract($_POST);
 
                                 if(strlen($username)>=255):
 
-                                        $error=" Votre username ne doit  pas etre si grand";
+                                        $error=" Votre username ne doit  pas etre si grand 🚏";
                                 else:
 
+                                       
 
-                                        if(empty($mdp)):
+                                        if(empty($mail)):
 
+
+                                                $error="votre mail semble etre vide 🚏";
 
                                         else:
 
-                                            if($mdp>255):
+                                                 if(filter_var($mail,FILTER_VALIDATE_EMAIL)):
 
+                                                                 installation($username,"Root");
+                                                                 $email=new email();
+                                                                 $error=
 
-                                                $error=" votre mot de passe doit contenir moin de 255 carateres";
+                                                                    "Email envoyé 📧 <br>
+                                                                    consulté votre boite Mail <br>
 
+                                                                 ";
+                                                                 sleep(3);
 
+                                                                 header("location:login");
 
-                                            else:
+                                                else:
 
-
-                                                    installation($username,$mdp);
-
-                                                    if(empty($mail)):
-
-                                                        $error="votre mail semble etre vide";
-
-                                                    else:
-
-                                                        if(filter_var($mail,FILTER_VALIDATE_EMAIL)):
-
-
-                                                            //header("location:home");
-
-                                                        else:
-
-                                                            $eror="Le mail n'est pas valide";
-
-                                                        endif;
-
-
-                                                    endif;
-
-                                                    endif;
+                                                        $eror="Le mail n'est pas valide ⛔";
 
                                                 endif;
 
-                                       endif;
 
+                                        endif;
 
-                                   endif;
-
+                                endif;
 
                             endif;
 
-
-                   endif;
-
+                                  
 
                             
 

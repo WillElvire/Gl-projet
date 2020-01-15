@@ -5,20 +5,27 @@ use Project;
 # creation de la table president
 create table President(
 
-			nom varchar(255) not null  collate latin1_general_ci,
-			pseudo varchar(255)  not null collate latin1_general_ci,
-            sexe varchar(255) not null collate latin1_general_ci,
-            mail varchar(255) not null collate latin1_general_ci,
-            adresse varchar(255) not null collate latin1_general_ci default "null",
-            ville varchar(225) not null collate latin1_general_ci default "null"
+			
+			username varchar(255)  not null collate latin1_general_ci,
+            mail varchar(255) not null collate latin1_general_ci primary key,
+            mdp varchar(225) not null collate  latin1_general_ci default "Root"
 		);
 #creation de la table article
 create table Article(
+
             id varchar(255) not null collate latin1_general_ci primary key,
             Autheur varchar(255) not null collate latin1_general_ci,
             titre  varchar(255) not null collate latin1_general_ci,
-            resum text not null collate latin1_general_ci,
-            day  timestamp  not null collate latin1_general_ci default now()
+            resum text not null collate latin1_general_ci
+            
+);
+
+create table Evaluation(
+
+       id int(10) not null collate latin1_general_ci unique key auto_increment,
+       identifiant varchar(255) not null collate latin1_general_ci ,
+       evaluation  int(10)  not null collate latin1_general_ci 
+    
 )
 
 

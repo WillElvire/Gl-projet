@@ -15,26 +15,16 @@
 
     <body>
          
-         <div class="container-fluid">
+     <div class="container-fluid">
                  
 
-                 <div class="row">
+           <div class="row">
 
-
-                        
-
-
-
-                   
-                   
-
-                             
-
-                    <div class="formulaire col-md-6">
+               <div class="formulaire col-md-6">
 
 
                                        
-                        <form class="form-group " method="post" action="" enctype="multipart/data-form">
+                        <form class="form-group  " method="post" action="" enctype="multipart/data-form">
 
                                 <div class="component">
                                         <br>
@@ -42,95 +32,48 @@
                                         <font color="white"> <b>CREEZ UN COMPTE ADMINISTRATEUR</b></font>
                                         <br>
                                         <br>
-                                        <label>Entrez votre nom et Prenom</label>
-                                        <input type="text" name="nom" class="form-control" required="true">
-                                        <label>Entrez votre username</label>
+                                        <label>Votre Username</label>
                                         <input type="text" name="username" class="form-control" required="true">
-
-                                        
-
-                                        <label>Sexe:</label>
-                                        <select class="form-control" name="sexe" required="true">
-                                                        
-                                                        <option value="Masculin">Masculin</option>
-
-                                                        <option value="Feminin">Feminin</option>
-
-                                        </select>
-                                        <label>Mot de passe</label>
-                                        <input type="password" name="mdp" class="form-control" required="true">
-
                                         <label>Votre Adresse Mail</label>
                                         <input type="mail" name="mail" class="form-control" required="true">
 
                                         <br>
-                                        <button class="btn btn-success" name="bouton">S'enregister </button>
+                                         <div class="alert alert-info">
+                                                 Vous recevrez Un Mail Avec Votre Mot de Passe Par default
+                                        </div>
+                                        <button class="btn btn-success col-md-4" name="bouton">Recevoir le Mail</button>
                                         <br>
                                         <br>
-
-
                                 </div>
-                                                
-                                                
+                        </form>
+                </div>
 
+                                <div class="Message col-md-5">
 
+                                          <?php 
 
-                                        </form>
+                                             if(isset($error)){
+                                                                   if($error!=""){
 
+                                           ?>
+                                      <br>
 
-                               </div>
-
-                               <div class="Message col-md-5">
-
-                                                <?php 
-
-                                                        if(isset($error)){
-
-                                                                if($error!=""){
-
-                                                ?>
-
-                                         <br>
-                                        <div class="alert alert-danger">
-
-
+                                      <div class="alert alert-danger">
                                                 <?=
                                                      $error;
                                                 ?>
-                                                 
-
-                                                </div>
-
-
+                                      </div>
                                                 <?php
                                                         }
 
                                                         }
                                                 ?>
+                                </div>
 
-
-                               </div>
-
-
-                
-
-
-                               
-
-                                
-                                
-
-
-                        
-                         
 
                  </div>
 
-
-         
-
          </div>
-
 
     </body>
         

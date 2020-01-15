@@ -11,7 +11,6 @@
 
 
             private  $mail;
- 			private  $nom;
  			private  $username;
  			private  $password;
 
@@ -23,7 +22,7 @@
 
 
 
- 			    public function __construct($mail){
+ 			    public function __construct(){
 
 
 
@@ -33,47 +32,6 @@
 
  			    }
 
-
-
-
-                        //DECLARATION DES SETTERS ET DES GETTERS 
-
-
-
- 			public function getNom():string{
-
-
-
-                return $this->nom;
-
-
-
-
- 			}
-
-
- 			public function getUsername():string{
-
-
-                return $this->username;
-
-
-
- 				
- 			}
-            public function getPassword():string{
-
-
-                return $this->password;
-
-
-
-                
-            }
-
-
-
-
                 /*
             
                          -------------   DECLARATION DES METHODES -----------
@@ -81,30 +39,44 @@
                 */
 
 
+     //cette methode permet d'envoyer  un mail 
+     //il prend un email et un username comme parametre 
+     
+            public function sendMail($username,$mail){
 
-            public function sendMail($mail){
 
+                    //gestion des eventuelles erreurs
 
+                    ini_set('display_errors', 1);
+                    error_reporting(E_ALL);
+                    //definition des composants d'un mail 
+                    
+                    $from="elvirekoua2000@gmail.com";
+                    $to=str_secure($mail);
+                    $subject="Reception de Votre Mot de Passe";
 
-
-                    $mail=str_secure($this->mail);
+                    $header="From :".$from;
 
                     $message="
 
-                           <b>Username: </b>  $this->name;
-                           <b>$Password : </b>  $this->password;
+                           <b>Username: </b>  $username;
+                           <b>Password : </b>  12548;
 
                             ";
 
+                      
+                      //$mailling envoi un mail a un mail passer en parametre
 
 
+                    $mailling = (mail($to, $subject, $message)) ? "envoyer": "Probleme d'envoi" ;
 
-                    return ($mail!="")?mail($mail, "Vos Identifiant", $message):" Ce mail n'est pas  disponible";
 
 
 
             }
 
+
+           //Tostring renvoi notre username et notre password et cas de verification de contenu
 
             public function Tostring(){
 
@@ -117,16 +89,7 @@
             }
 
 
-            public function GeneratePassword($password){
-
-
-                
-                $password=random_int(1, 10000000000);
-                    
-
-
-
-            }
+            
 
 
 

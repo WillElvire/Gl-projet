@@ -29,6 +29,18 @@
     	 		 	      	        
     	 		 	      	        <button class="btn btn-success" name="confirm">Se connecter</button>
 
+                                            <br>
+
+                                            <br>
+                                            <div class="alert alert-primary">
+
+
+                                                 Nb:Si vous n'avez Pas recu votre password Automatique entrez <span class="badge badge-info">Root</span>
+                                                  
+
+
+                                            </div>
+
                       
                                 </div>
     	 		 	      	

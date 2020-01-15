@@ -23,8 +23,7 @@ class Redirect{
 	    	  else:    
 
                         $getVerification=verify();
-                        echo $getVerification;
-                        
+                                                
                         if($getVerification==true):
 
 	    	  	        $this->page="home";

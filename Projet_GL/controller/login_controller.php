@@ -38,7 +38,7 @@
 
                          if(read("password")==$mdp):
 
-                             header("location:home");
+                             
 
                          else:
 

@@ -1,5 +1,5 @@
 <?php 
-require_once '../__config/db.php';
+
 
 //Creation de la Classe President de cp
 //cette classe permet de creez un nouveau compte administrateur
@@ -8,12 +8,11 @@ require_once '../__config/db.php';
 
 
 //declaration des differents attributs
-          private $nom;
-          private $sexe;
+        
           private $email;
           private $username;
           private $password;
-          private $base;
+          
      
 
 //Le constructeur 
@@ -39,25 +38,18 @@ require_once '../__config/db.php';
         //La methode Tostring() permet de voire le contenu des attributs declaré
            public function Tostring():array{
 
-                return [$this->nom,
-                            $this->prenom,
-                                    $this->sexe,
-                                            $this->email,
-                                                    $this->password];
+                return [
+                           $this->email,
+                          $this->password,
+                          $this->password
+                    ];
            }
 
         //declaration des accesseurs et des mutateurs
         //les accesseurs sont des methodes qui permettent de recuperer les valeurs de differents attributs
         
         
-        public function getNom():string{
-
-               return $this->nom;
-
-        } 
-
-
-
+      
         public function getUsername():string{
 
                 return $this->username;
@@ -85,18 +77,13 @@ require_once '../__config/db.php';
 
 
        //Persistance des données dans La base donnée
-        public function createPresident($nom,$username,$sexe,$mail){
+        public function createPresident($username,$mail){
 
                     global $db;
-                    
-                    $this->nom=$nom;
                     $this->username=$username;
-                    $this->sexe=$sexe;
-                    $this->email=$email;
-
-                        $request=$db->prepare("INSERT INTO  President(nom,pseudo,sexe,mail) values (?,?,?,?)");
-                        $db->beginTrasaction();
-                        $request->execute(array($this->nom,$this->prenom,$this->sexe,$this->username));
+                    $this->mail=$mail;
+                    $request=$db->prepare("INSERT INTO  President(username,mail) values (?,?)");
+                    $request->execute(array($username,$mail));
 
 
 

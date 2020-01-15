@@ -42,10 +42,12 @@
                                         <font color="white"> <b>CREEZ UN COMPTE ADMINISTRATEUR</b></font>
                                         <br>
                                         <br>
-                                        <label>Entrez votre nom</label>
+                                        <label>Entrez votre nom et Prenom</label>
                                         <input type="text" name="nom" class="form-control" required="true">
-                                        <label>Entrez votre prenom</label>
-                                        <input type="text" name="prenom" class="form-control" required="true">
+                                        <label>Entrez votre username</label>
+                                        <input type="text" name="username" class="form-control" required="true">
+
+                                        
 
                                         <label>Sexe:</label>
                                         <select class="form-control" name="sexe" required="true">
@@ -63,6 +65,8 @@
 
                                         <br>
                                         <button class="btn btn-success" name="bouton">S'enregister </button>
+                                        <br>
+                                        <br>
 
 
                                 </div>

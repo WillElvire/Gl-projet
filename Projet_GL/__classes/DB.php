@@ -1,4 +1,4 @@
-<?php
+lkl<?php
 /**
  * Class DB
  * Allows you to make requests easier than before by using PDO

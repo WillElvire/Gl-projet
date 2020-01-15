@@ -9,11 +9,11 @@ extract($_POST);
  if(isset($_POST['bouton'])):
 
 
-            if(isset($nom) and isset($prenom) and isset($sexe) and isset($mdp) and isset($mail)):
+            if(isset($nom) and isset($username) and isset($sexe) and isset($mdp) and isset($mail)):
 
 
                    $nom=str_secure($nom);
-                   $prenom=str_secure($prenom);
+                   $username=str_secure($username);
                    $sexe=str_secure($sexe);
                    $mdp=str_secure($mdp);
                    $mail=str_secure($mail);
@@ -35,15 +35,15 @@ extract($_POST);
                         else:
 
 
-                            if(empty($prenom)):
+                            if(empty($username)):
 
 
 
                             else:
 
-                                if(strlen($prenom)>=255):
+                                if(strlen($username)>=255):
 
-                                        $error=" Votre Prenom ne doit  pas etre si grand";
+                                        $error=" Votre username ne doit  pas etre si grand";
                                 else:
 
 
@@ -62,7 +62,7 @@ extract($_POST);
                                             else:
 
 
-                                                    installation($nom,sha1($mdp));
+                                                    installation($username,$mdp);
 
                                                     if(empty($mail)):
 

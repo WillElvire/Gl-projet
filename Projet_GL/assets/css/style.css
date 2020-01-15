@@ -23,13 +23,16 @@
   font-weight: bold;
   margin-left: 15px;
 }
+
 .component{
   margin-left: 45px;
 }
+
 body{
 
   background-image: url("../img/banner.jpg");
 }
+
 .formulaire .form-control:hover{
   background: rgba(0,0,0,0.1);
   color: white;
@@ -37,7 +40,72 @@ body{
   text-overflow: initial;
   border:1px solid forestgreen;
 }
+
 .formulaire button:hover{
      background: rgba(0,0,0,0.5);
      color:forestgreen;
+}
+
+@media(min-width: 0px) and (max-width: 1000px){
+
+.formulaire{
+  width: auto;
+  height: auto;
+  background-color:transparent;
+  margin-left: 0px;
+  box-shadow: none;
+  margin-top: 0px;
+}
+
+.formulaire .form-control{
+  width: 300px;
+  text-align: center;
+}
+
+.formulaire label{
+  color: white;
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+.component{
+  margin-left: 45px;
+}
+
+
+body{
+
+  background-image: url("../img/banner.jpg");
+}
+
+
+
+.formulaire .form-control:hover{
+  background: rgba(0,0,0,0.1);
+  color: white;
+  font-weight: bold;
+  text-overflow: initial;
+  border:1px solid forestgreen;
+}
+
+
+.formulaire button{
+  width: 300px;
+}
+
+
+
+.formulaire button:hover{
+     background: rgba(0,0,0,0.5);
+     color:forestgreen;
+}
+
+
+
+
+
+
+
+
+
 }

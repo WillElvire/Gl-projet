@@ -13,3 +13,13 @@
 
 
     }
+
+
+    function AlertDebug(){
+
+
+      return "<script type=\"text/javascript\">
+
+                   alert('debug');
+            ";
+    }

@@ -1,5 +1,6 @@
 <?php 
-     
+ session_start();
+ ob_start();     
 
      $myresult=verify();
      if($myresult==true){
@@ -9,7 +10,6 @@
 <!doctype html>
 <html lang="en">
   <head>
-
 
     <!--- inclusion du head  !-->
     <?php  include_once 'includes/head.php'?>;

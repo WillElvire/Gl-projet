@@ -1,9 +1,11 @@
 <?php 
  session_start();
- ob_start();     
-
+     global $db;
+     $request=$db->query("SELECT *from President");
+     $request->fetchAll();
+     $donne=$request->rowCount();
      $myresult=verify();
-     if($myresult==true){
+     if($myresult==true and $donne>0){
 
  
  ?>

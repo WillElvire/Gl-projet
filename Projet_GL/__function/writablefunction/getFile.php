@@ -7,6 +7,8 @@
         /*
             le chemin d'acces du fichier
          */
+        
+         
     	     $file=dirname(__DIR__).DIRECTORY_SEPARATOR."username";
           $file2=dirname(__DIR__).DIRECTORY_SEPARATOR."password";
 

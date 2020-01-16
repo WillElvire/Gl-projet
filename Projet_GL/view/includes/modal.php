@@ -7,9 +7,11 @@
 
               extract($_POST);
 
-              if(isset($confirm)):
-
+              if(isset($out)):
+                  
+                  sleep(1);
                   header("location:deconnection");
+                  exit();
 
               endif;
 
@@ -84,7 +86,7 @@
           <div class="modal-footer">
             <form method="post" action="">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-                  <button  class="btn btn-primary" name="confirm">Oui</button>
+                  <button  class="btn btn-primary" name="out">Oui</button>
             </form>
                
 
@@ -145,3 +147,11 @@
     </form>
     </div>
   </div>
+
+
+
+
+
+
+
+

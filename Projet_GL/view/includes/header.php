@@ -1,3 +1,46 @@
+<?php 
+
+
+
+   if(isset($_POST['Evaluer'])):
+
+
+
+        extract($_POST);
+
+
+
+
+        if(!empty($identifiant) and !empty($evaluateur) and !empty($evalutation) and !empty($commentaire) and !empty($message)):
+
+                  $identifiant=str_secure($identifiant);
+                  $evaluateur=str_secure($evaluateur);
+                  $evalutation=str_secure($evalutation);
+                  $commentaire=str_secure($commentaire);
+                  $message=str_secure($message);
+
+                  $Eval=new Evaluation($identifiant,$evalutation,$evaluateur,$commentaire,$message);
+
+
+                  $Eval->Evaluer();
+
+        else:
+
+
+           var_dump($_POST);
+
+
+      endif;
+
+
+
+
+
+
+endif;
+
+?>
+
 <!---  lA SIDEBAR ET SES ELEMENTS -->
 <div class="container-fluid">
   <div class="row">
@@ -33,8 +76,70 @@
 
 
 
+                <li>
+                                  <!-- Button trigger modal -->
+                      <a class="nav-link" data-toggle="modal" href="" data-target="#staticBackdrop">
+                          Evaluer un Article
+                      </a>
 
-                  <?=setActionBar("Evaluer un Article","#","Eval")?>
+                </li>
+
+<!-- Modal -->
+              <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="staticBackdropLabel">Evaluer  un Article</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+
+
+                      <form method="post" class="form-group col-md-12">
+
+                           <div class='alert alert-info'>Vous Avez Droit à 3 Evaluations  Par Article</div>
+
+                            <label>Entrez l'identifiant de L'Article</label>
+                            <input type=text name="identifiant" class="form-control border-success">
+                            <label>Le nom de L'evaluateur</label>
+                            <input type=text name="evaluateur" class="form-control border-success">
+                            <label>Numero d'Evaluation</label>
+                            <select class="form-control border-success" name="evalutation">
+
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                              
+                                
+
+                            </select>
+                            <label>Entrez le commentaire</label>
+                            <input type=text name="commentaire" class="form-control border-success">
+                            <label>Entrez un Message Pour le President</label>
+                            <textarea name="message"  rows="7" class="form-control border-success">
+
+
+                            </textarea>
+                       </div>
+                        <div class="modal-footer">
+
+
+                                  <button class="btn btn-success col-md-12" name="Evaluer">Evaluer</button>
+
+
+                            </form>
+                        </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+                  
 
                   <?=setActionBar("Lister les articles","#","List")?>
           

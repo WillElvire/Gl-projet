@@ -21,10 +21,12 @@ create table Article(
 );
 
 create table Evaluation(
-
        id int(10) not null collate latin1_general_ci unique key auto_increment,
        identifiant varchar(255) not null collate latin1_general_ci ,
-       evaluation  int(10)  not null collate latin1_general_ci 
+       evaluation  int(10)  not null collate latin1_general_ci,
+       evaluateur varchar(255) not null collate latin1_general_ci,
+       commentaire varchar(255) not null collate latin1_general_ci,
+       message varchar(255)  not null collate latin1_general_ci
     
 )
 

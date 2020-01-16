@@ -13,6 +13,7 @@
        require_once'__config/db.php';
        require_once '__classes/Evaluation.php';
        include_once  '__function/dataFunction/password.php';
+       require_once '__classes/Evaluation.php';
        
         
         

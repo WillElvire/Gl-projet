@@ -11,7 +11,7 @@
               </p>
               <br>
               <br>
-              <button class="btn btn-primary invisible" id="Ajout">Creez Article</button>
+              <button class="btn btn-primary "data-toggle="modal" data-target="#exampleModalScrollable" >Creez Article</button>
             </div>
             </div>    
             <div class="card">
@@ -20,17 +20,17 @@
                 <h5 class="card-title">Evaluez un Article</h5>
                 <p class="card-text">Vous Pouvez Evalué un Article en cliquant ici</p>
                 <br>
-                <button class="btn btn-primary" id="Eval">Evaluer Article</button>
+                <button class="btn btn-primary" data-toggle="modal"  data-target="#staticBackdrop">Evaluer Article</button>
                 
               </div>
             </div>
             <div class="card">
-              <img src="https://media2.giphy.com/media/h5FIFDs6rXLpWlWWZJ/source.gif" class="card-img-top" alt="...">
+              <img src="https://media.tenor.com/images/fb5e8cce85e37b71ce4d67aadbfed6ea/tenor.gif"  class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title"> Affichez la Liste</h5>
                 <p class="card-text">Cette Fonctionnalité vous permet de voire les articles qui ont été accepté</p>
                 <br>
-                  <button class="btn btn-primary" id="List">  
+                  <button class="btn btn-primary" id="content">  
 
                         Afficher la liste
                        

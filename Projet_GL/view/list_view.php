@@ -13,7 +13,7 @@ global $data;
                     <th>Auteur</th>
                     <th>Evalueur</th>
                     <th>Note d'Evaluation</th>
-                    <th>Desicion Final</th> 
+                    <th>Action</th> 
                 </tr>
               </thead>
               <tbody>

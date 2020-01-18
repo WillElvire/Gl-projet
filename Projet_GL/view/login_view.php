@@ -11,7 +11,40 @@
 </head>
     <body>
     	 	<div class="container-fluid">
+                  <br>
+                  <?php  
+
+                                         //verification de l'existance de l'utilisateur afin d'afficher sa session
+
+
+                                      $fichier=verify();
+                                       //sil existe on l'ui permet de se connecter directement
+                                       
+                                            if($fichier==true){
+
+                                                 $username=read("username");
+
+                                                 if($username!=""){
+
+                                  ?>
+                                   
+                                   <div class="alert alert-info col-md-5">
+
+                                                   Nous nous souvenons de vous <?= $username ?>
+                                                   
+                                                   
+
+                                                   
+                                    </div>
+
+                                    <?php 
+                                           }
+                                           }
+
+                                    ?>
     	 		    <div class="row">
+
+
     	 		 	      <div class="formulaire col-md-6">
     	 		 	      <form method="post" action="" class="col-md-12 form-group" >
                                 <div class="component">
@@ -70,9 +103,23 @@
 
 
                                    </div>
+
+
     	 	</div>
+            <br>
+
+            
+
     </body>
  		<?php 
  		      include_once 'view/includes/script.php';
  		?>
 </html>
+
+<style type="text/css">
+      
+      .opaque{
+            visibility: hidden;
+            opacity: 0;
+      }
+</style>

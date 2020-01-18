@@ -11,8 +11,7 @@
                   
                   sleep(1);
                   header("location:deconnection");
-                  exit();
-
+                  
               endif;
 
               if(isset($enregistrer)):
@@ -38,12 +37,7 @@
                         //on cree un fichier avec le nom de l'auteur
                         $article=new Article($identificateur,$titre,$nom,$resume);
                         $article->createResume();
-
-
-
-                            
-                         sleep(1);
-
+                        sleep(1);
                         try{    
 
                                  //utilisation de la classe permettant de generer des pdf
@@ -53,6 +47,8 @@
                                 $html2pdf->writeHTML($content);
                                 //on rempli le fichier qui a le nom de l'auteur
                                 $html2pdf->output("C:wamp".DIRECTORY_SEPARATOR."www".DIRECTORY_SEPARATOR."gl-projet".DIRECTORY_SEPARATOR."Projet_GL".DIRECTORY_SEPARATOR."Articles".DIRECTORY_SEPARATOR.$nom.".pdf","F");
+
+                                echo "<div class='alert alert-info'>Article crée avec success</div>";
 
                         }catch(Html2PdfException $e){
 
@@ -68,7 +64,8 @@
 
 
               ?>
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+   <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -94,7 +91,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div>   -->
 
 
    
@@ -119,19 +116,19 @@
                       
                       <label>Identificateur</label>
 
-                      <input type="text" name="identificateur"  class="form-control border-success">
+                      <input type="text" name="identificateur"  class="form-control border-success " required="">
 
                           <label>Nom & Prenom </label>
 
-                          <input type="text" name="nom" class="form-control  border-success" >
+                          <input type="text" name="nom" class="form-control  border-success"  required="">
 
                           <label>Titre</label>
 
-                          <input type="text" name="titre"  class="form-control border-success">
+                          <input type="text" name="titre"  class="form-control border-success" required="">
 
                           <label>Resume</label>
 
-                          <textarea rows="5" id="resume" name="resume"   class="form-control border-success"  >
+                          <textarea rows="5" id="resume" name="resume"   class="form-control border-success"  required="">
 
                           </textarea>
 

@@ -32,11 +32,7 @@ if($allEval>0):
                                         ".$valeur['evaluation']."
                                     </td>
 
-                                    <td>
-
-                                            Accepte Unanimement
-         
-                                    </td>
+                                    <td><a href='Articles/".$valeur['Autheur']."' class='btn btn-primary' target='blank'>Afficher le PDF</a></td>
                                  
                                 </tr>
                                
@@ -51,8 +47,7 @@ if($allEval>0):
 
                 echo "</table>";
 
-                var_dump($note);
-
+                
 else:
 
      echo "<div class='alert alert-danger'>Aucune Evaluation n'a ete faite </div>";

@@ -46,14 +46,14 @@
   */
 
 function read($file):string{
-
+//cette methode permet de lire et ecrire dans un fichier 
      $file=dirname(__DIR__).DIRECTORY_SEPARATOR.str_secure($file);
-
+//verification des l'existence du fichier 
      if(file_exists($file)):
-
+//on recupere le contenu du fichier
           $readline=(string)file_get_contents($file);
-
-          return (!empty($readline))?$readline:"default Account";
+//On retourne le contenu du fichier
+          return (!empty($readline))?$readline:"";
 
      endif;
 

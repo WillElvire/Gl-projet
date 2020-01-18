@@ -5,9 +5,7 @@
      $request->fetchAll();
      $donne=$request->rowCount();
      $myresult=verify();
-     if($myresult==true and $donne>0){
-
- 
+     if($myresult==true and $donne>0){  
  ?>
 <!doctype html>
 <html lang="en">
@@ -39,10 +37,10 @@
   <body>
       <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
          <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Espace Administrateur</a>
-         <input class="form-control bg-dark w-100"  style="border-style: none;" type="text" placeholder="Search" aria-label="Search">
+         <input class="form-control bg-dark w-100 invisible"  style="border-style: none;" type="text" placeholder="Search" aria-label="Search">
          <ul class="navbar-nav px-3">
               <li class="nav-item text-nowrap">
-                   <a class="nav-link" href="#">Recherche</a>
+                   <a class="nav-link invisible" href="#">Recherche</a>
               </li>
           </ul>
 
@@ -60,20 +58,27 @@
         <div class="btn-toolbar mb-2 mb-md-0">
           
          
-          <div class="dropdown">
+          <div class="dropdown container">
                 <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Article
+                Action
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 
                     <a class="dropdown-item" href="#">
+                       <form method="post" action="">
 
-                        Creez un  Article  
+                                 <label>Changez Votre Mot de Passe</label>
+                                 <input type="password" name="pass" class="form-control">
+                                 <br> 
+                                 <button class="btn btn-primary" name="bouton">Changer</button>
+                     </form>
 
+
+                              
+                                
                      </a>
                     
-                    <a class="dropdown-item" href="#">Evaluer Article</a>
-                    
+                   
                     
                 </div>
           </div>

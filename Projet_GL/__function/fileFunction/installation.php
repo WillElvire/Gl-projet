@@ -5,7 +5,7 @@
    function installation($nom,$mdp){
 
                 
-                 global $db;
+         
                  
 
                     		$fichier=dirname(__DIR__).DIRECTORY_SEPARATOR."username";
@@ -31,6 +31,26 @@
 
 
                     		endif;
+
+
+   }
+
+   function modify($mdp){
+
+                   $fichier2=dirname(__DIR__).DIRECTORY_SEPARATOR."password";
+                   $mdp=str_secure($mdp);
+
+                   if(file_exists($fichier2)):
+
+                             file_put_contents($fichier2, $mdp);
+                    else:
+
+                             file_put_contents($fichier2, $mdp);
+                    endif;
+
+
+
+
 
 
    }

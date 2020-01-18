@@ -102,11 +102,11 @@ endif;
                            <div class='alert alert-info'>Vous Avez Droit à 3 Evaluations  Par Article</div>
 
                             <label>Entrez l'identifiant de L'Article</label>
-                            <input type=text name="identifiant" class="form-control border-success">
+                            <input type=text name="identifiant" class="form-control border-success" required="">
                             <label>Le nom de L'evaluateur</label>
-                            <input type=text name="evaluateur" class="form-control border-success">
+                            <input type=text name="evaluateur" class="form-control border-success" required="">
                             <label>Numero d'Evaluation</label>
-                            <select class="form-control border-success" name="evalutation">
+                            <select class="form-control border-success" name="evalutation" required="">
 
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -117,9 +117,9 @@ endif;
 
                             </select>
                             <label>Entrez le commentaire</label>
-                            <input type=text name="commentaire" class="form-control border-success">
+                            <input type=text name="commentaire" class="form-control border-success" required="">
                             <label>Entrez un Message Pour le President</label>
-                            <textarea name="message"  rows="7" class="form-control border-success">
+                            <textarea name="message"  rows="7" class="form-control border-success" required="">
 
 
                             </textarea>
@@ -151,7 +151,7 @@ endif;
                  
                         <!-- Button trigger modal -->
                       <li>
-                          <a   href="" data-toggle="modal" data-target="#exampleModal" style="margin-left: 12px;text-decoration: none;font-weight: bold;">
+                          <a   href="login"  style="margin-left: 12px;text-decoration: none;font-weight: bold;">
                                   Deconnection 
                            </a>
                         </li>

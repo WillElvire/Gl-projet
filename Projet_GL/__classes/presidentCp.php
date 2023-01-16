@@ -28,13 +28,7 @@
 
            public  function __construct(){
 
-
-                    
-	
            }
-
-
-          
         //La methode Tostring() permet de voire le contenu des attributs declaré
            public function Tostring():array{
 

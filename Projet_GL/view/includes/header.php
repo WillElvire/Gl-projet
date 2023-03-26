@@ -1,42 +1,20 @@
 <?php 
 
-
-
    if(isset($_POST['Evaluer'])):
-
-
-
         extract($_POST);
-
-
-
-
-        if(!empty($identifiant) and !empty($evaluateur) and !empty($evalutation) and !empty($commentaire) and !empty($message)):
+        bool verification = !empty($identifiant) and !empty($evaluateur) and !empty($evalutation) and !empty($commentaire) and !empty($message);
+        if(verification):
 
                   $identifiant=str_secure($identifiant);
                   $evaluateur=str_secure($evaluateur);
                   $evalutation=str_secure($evalutation);
                   $commentaire=str_secure($commentaire);
                   $message=str_secure($message);
-
                   $Eval=new Evaluation($identifiant,$evalutation,$evaluateur,$commentaire,$message);
-
-
                   $Eval->Evaluer();
-
         else:
-
-
            var_dump($_POST);
-
-
       endif;
-
-
-
-
-
-
 endif;
 
 ?>

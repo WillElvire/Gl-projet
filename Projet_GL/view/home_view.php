@@ -43,11 +43,9 @@
                    <a class="nav-link invisible" href="#">Recherche</a>
               </li>
           </ul>
-
       </nav>
 
     <?php include_once("includes/header.php");?>
-
     <main role="main" class="col-md-9">
       <br>
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
@@ -55,9 +53,7 @@
         <h1 class="h2">
                <?php $responce=read("username");echo $responce;?>
         </h1>
-        <div class="btn-toolbar mb-2 mb-md-0">
-          
-         
+        <div class="btn-toolbar mb-2 mb-md-0">         
           <div class="dropdown container">
                 <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Action
@@ -72,29 +68,13 @@
                                  <br> 
                                  <button class="btn btn-primary" name="bouton">Changer</button>
                      </form>
-
-
-                              
-                                
-                     </a>
-                    
-                   
-                    
+                   </a>                   
                 </div>
           </div>
-
         </div>
-
-
       </div>
-
-
-      <main class="container" id="container">
-              
-
+        <main class="container" id="container">
               <?php include_once 'includes/content.php' ?>
-
-          
         </main>
     </main>
   </div>
@@ -102,15 +82,9 @@
 
         <?php 
 
-                include_once'includes/script.php';
-                include_once'includes/script2.php';
-
-
+          include_once'includes/script.php';
+          include_once'includes/script2.php';
          ?>
-
-
-
- 
   <script type="text/javascript" src="assets/js/jquery-1.11.3.min.js"></script>
   <script type="text/javascript" src="assets/js/ajaxLoader.js"></script>
   
